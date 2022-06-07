@@ -56,6 +56,17 @@ public class page_accueil {
 		aideButton.setLocation(143,349);
 
 		frame.getContentPane().add(jouerButton);
+		
+		JLabel titre = new JLabel("");
+		ImageIcon titre1 = new ImageIcon(page_accueil.class.getResource("/img/titre.png"));
+		Image titre2 = titre1.getImage();
+		Image titreModify = titre2.getScaledInstance(500,50,java.awt.Image.SCALE_SMOOTH);
+		titre1 = new ImageIcon(titreModify);
+		titre.setIcon(titre1);
+		titre.setBounds(219, 0, 277, 145);
+		
+		
+		frame.getContentPane().add(titre);
 		frame.getContentPane().add(parametrageButton);
 		frame.getContentPane().add(aideButton);
 		
@@ -68,7 +79,7 @@ public class page_accueil {
 		samurai1 = new ImageIcon(samuraiModify);
 		
 		samurai.setIcon(samurai1);
-		samurai.setBounds(129, 33, 586, 452);
+		samurai.setBounds(284, 67, 586, 452);
 		
 		frame.getContentPane().add(samurai);
 		
@@ -80,7 +91,10 @@ public class page_accueil {
 		background.setBounds(0, -16, 917, 560);
 		
 		frame.getContentPane().add(background);
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setBounds(0, 0, 45, 13);
+		frame.getContentPane().add(lblNewLabel);
 
 	}
-
 }
