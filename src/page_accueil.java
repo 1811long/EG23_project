@@ -64,7 +64,7 @@ public class page_accueil {
 		Image titreModify = titre2.getScaledInstance(500,50,java.awt.Image.SCALE_SMOOTH);
 		titre1 = new ImageIcon(titreModify);
 		titre.setIcon(titre1);
-		titre.setBounds(219, 0, 277, 145);
+		titre.setBounds(185, -16, 574, 145);
 		
 		
 		frame.getContentPane().add(titre);
