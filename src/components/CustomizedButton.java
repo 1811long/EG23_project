@@ -5,8 +5,10 @@ import javax.swing.border.Border;
 import java.awt.*;
 
 public class CustomizedButton extends JButton{
+	
     public final Font FONT_DEFAULT = new Font("Purisa", Font.BOLD, 13);
     public final Color BACKGROUND_COLOR = new Color(164,200,225);
+    
     public CustomizedButton(String text){
         setFont(FONT_DEFAULT);
         setBorder(new RoundBtn(15));
