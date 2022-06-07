@@ -1,5 +1,4 @@
 import components.CustomizedButton;
-
 import java.awt.EventQueue;
 import java.awt.Image;
 
