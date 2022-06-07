@@ -8,7 +8,10 @@ public class CustomizedButton extends JButton{
 	
     public final Font FONT_DEFAULT = new Font("Purisa", Font.BOLD, 13);
     public final Color BACKGROUND_COLOR = new Color(164,200,225);
-    
+
+    public final int WIDTH_CONFIRMER = 100;
+    public final int HEIGHT_CONFIRMER = 30;
+
     public CustomizedButton(String text){
         setFont(FONT_DEFAULT);
         setBorder(new RoundBtn(15));
@@ -16,6 +19,43 @@ public class CustomizedButton extends JButton{
         setBackground(BACKGROUND_COLOR);
         setSize(200,60);
     }
+
+    public CustomizedButton(String text, ImageIcon icon){
+        setIcon(icon);
+        setFont(FONT_DEFAULT);
+
+        setHorizontalAlignment(SwingConstants.RIGHT);
+        setHorizontalTextPosition(SwingConstants.LEFT);
+        setIconTextGap(40);
+
+        setBorder(new RoundBtn(15));
+        setText(text);
+        setBackground(BACKGROUND_COLOR);
+        setSize(200,60);
+    }
+
+
+    public CustomizedButton(String text, ImageIcon icon, int width, int height){
+        setSize(width,height);
+
+        setHorizontalAlignment(SwingConstants.RIGHT);
+        setHorizontalTextPosition(SwingConstants.LEFT);
+        setIconTextGap(40);
+
+        setIcon(icon);
+        setFont(FONT_DEFAULT);
+
+        setBorder(new RoundBtn(15));
+        setText(text);
+        setBackground(BACKGROUND_COLOR);
+    }
+
+    public CustomizedButton(String text, String type){
+        switch (type){
+
+        }
+    }
+
 }
 
 
