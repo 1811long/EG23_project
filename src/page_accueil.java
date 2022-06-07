@@ -1,3 +1,5 @@
+import components.CustomizedButton;
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -34,8 +36,12 @@ public class page_accueil {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 963, 617);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+
+		CustomizedButton startButton = new CustomizedButton("start");
+		startButton.setLocation(200,200);
 	}
 
 }
