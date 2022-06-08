@@ -12,6 +12,7 @@ import javax.swing.SwingConstants;
 
 import components.CustomizedButton;
 import components.RetournerButton;
+import components.CustomizedLabel;
 import java.awt.Font;
 
 public class page_configurer {
@@ -92,40 +93,40 @@ public class page_configurer {
 		titre1 = new ImageIcon(titreModify);
 		titre.setIcon(titre1);
 		
-		JLabel soldat1 = new JLabel("");
+		
 		
 		ImageIcon soldat1_1 = new ImageIcon(page_accueil.class.getResource("/img/soldat1_configurer.png"));
-		Image soldat1_2 = soldat1_1.getImage();
-		Image soldat1Modify  = soldat1_2.getScaledInstance(600,80,java.awt.Image.SCALE_SMOOTH);
-		soldat1_1 = new ImageIcon(soldat1Modify);
-		soldat1.setIcon(soldat1_1);
+		
+		CustomizedLabel soldat1 = new CustomizedLabel(soldat1_1, 600 , 80);
+		
 		soldat1.setBounds(23, 60, 630, 95);
 		frame.getContentPane().add(soldat1);
 		
-		JLabel soldat2 = new JLabel("");
+		
 		
 		ImageIcon soldat2_1 = new ImageIcon(page_accueil.class.getResource("/img/soldat2_configurer.png"));
-		Image soldat2_2 = soldat2_1.getImage();
-		Image soldat2Modify  = soldat2_2.getScaledInstance(600,80,java.awt.Image.SCALE_SMOOTH);
-		soldat2_1 = new ImageIcon(soldat2Modify);
-		soldat2.setIcon(soldat2_1);
+		
+		CustomizedLabel soldat2 = new CustomizedLabel(soldat2_1, 600 , 80);
 		
 		
 		soldat2.setBounds(23, 178, 600, 80);
 		frame.getContentPane().add(soldat2);
 		
-		JLabel soldat3 = new JLabel("");
-		
 		ImageIcon soldat3_1 = new ImageIcon(page_accueil.class.getResource("/img/soldat3_configurer.png"));
-		Image soldat3_2 = soldat3_1.getImage();
-		Image soldat3Modify  = soldat3_2.getScaledInstance(600,80,java.awt.Image.SCALE_SMOOTH);
-		soldat3_1 = new ImageIcon(soldat3Modify);
-		soldat3.setIcon(soldat3_1);
+		
+		CustomizedLabel soldat3 = new CustomizedLabel(soldat3_1, 600 , 80);
 		
 		soldat3.setBounds(23, 284, 600, 80);
 		frame.getContentPane().add(soldat3);
 		
 		CustomizedButton butConfirmer = new CustomizedButton("Confirmer", 150 , 50 );
+		butConfirmer.setSize(187, 50);
+		
+		ImageIcon sword_1 = new ImageIcon(page_accueil.class.getResource("/img/sword.png"));
+		Image sword_2 = sword_1.getImage();
+		Image swordModify  = sword_2.getScaledInstance(30,30,java.awt.Image.SCALE_SMOOTH);
+		sword_1 = new ImageIcon(swordModify);
+		butConfirmer.setIcon(sword_1);
 		butConfirmer.setFont(new Font("Dialog", Font.BOLD, 13));
 		butConfirmer.setForeground(new Color(0, 0, 0));
 		butConfirmer.addActionListener(new ActionListener() {
@@ -133,22 +134,11 @@ public class page_configurer {
 			}
 		});
 		
-		JLabel sword = new JLabel("");
 		
-		ImageIcon sword_1 = new ImageIcon(page_accueil.class.getResource("/img/sword.png"));
-		Image sword_2 = sword_1.getImage();
-		Image swordModify  = sword_2.getScaledInstance(30,30,java.awt.Image.SCALE_SMOOTH);
-		sword_1 = new ImageIcon(swordModify);
-		sword.setIcon(sword_1);
-		
-		
-		sword.setBounds(396, 393, 37, 50);
-		frame.getContentPane().add(sword);
 		
 		
 		butConfirmer.setBackground(new Color(164, 200, 225));
-		butConfirmer.setHorizontalAlignment(SwingConstants.LEFT);
-		butConfirmer.setLocation(283, 393);
+		butConfirmer.setLocation(244, 422);
 		frame.getContentPane().add(butConfirmer);
 		
 		

@@ -50,6 +50,7 @@ public class CustomizedButton extends JButton{
         setBackground(BACKGROUND_COLOR);
     }
 
+<<<<<<< HEAD
     public CustomizedButton (ImageIcon icon){
         Image image = icon.getImage();
         Image newimg = image.getScaledInstance(30,30, java.awt.Image.SCALE_SMOOTH);
@@ -62,6 +63,14 @@ public class CustomizedButton extends JButton{
         switch (type){
 
         }
+=======
+    public CustomizedButton( ImageIcon icon, int width, int height) {
+    	Image icon_1 = icon.getImage();
+		Image iconModify  = icon_1.getScaledInstance(width,height,java.awt.Image.SCALE_SMOOTH);
+		icon = new ImageIcon(iconModify);
+		setIcon(icon);
+		
+>>>>>>> a87a10b3f0393873a5b0b475942eb4c7641649ad
     }
 
 }

@@ -72,6 +72,12 @@ public class page_inspecter {
 		
 		
 		CustomizedButton butConfirmer = new CustomizedButton("Mouvements des troupes", 250 , 50 );
+		butConfirmer.setSize(293, 50);
+		ImageIcon sword_1 = new ImageIcon(page_accueil.class.getResource("/img/sword.png"));
+		Image sword_2 = sword_1.getImage();
+		Image swordModify  = sword_2.getScaledInstance(30,30,java.awt.Image.SCALE_SMOOTH);
+		sword_1 = new ImageIcon(swordModify);
+		butConfirmer.setIcon(sword_1);
 		butConfirmer.setFont(new Font("Dialog", Font.BOLD, 13));
 		butConfirmer.setForeground(new Color(0, 0, 0));
 		butConfirmer.addActionListener(new ActionListener() {
@@ -79,17 +85,10 @@ public class page_inspecter {
 			}
 		});
 		
-		JLabel sword = new JLabel("");
-		
-		ImageIcon sword_1 = new ImageIcon(page_accueil.class.getResource("/img/sword.png"));
-		Image sword_2 = sword_1.getImage();
-		Image swordModify  = sword_2.getScaledInstance(30,30,java.awt.Image.SCALE_SMOOTH);
-		sword_1 = new ImageIcon(swordModify);
-		sword.setIcon(sword_1);
 		
 		
-		sword.setBounds(419, 410, 37, 50);
-		frame.getContentPane().add(sword);
+		
+	
 		
 		
 		butConfirmer.setBackground(new Color(164, 200, 225));
@@ -98,6 +97,7 @@ public class page_inspecter {
 		frame.getContentPane().add(butConfirmer);
 		
 		JButton BDE = new JButton("");
+		BDE.setBackground(Color.RED);
 		ImageIcon BDE_1 = new ImageIcon(page_accueil.class.getResource("/img/BDE.png"));
 		Image BDE_2 = BDE_1.getImage();
 		Image BDEModify  = BDE_2.getScaledInstance(70,70,java.awt.Image.SCALE_SMOOTH);
@@ -158,6 +158,7 @@ public class page_inspecter {
 		frame.getContentPane().add(sportive);
 		
 		JButton library = new JButton("");
+		library.setBackground(new Color(50, 205, 50));
 		
 		ImageIcon library_1 = new ImageIcon(page_accueil.class.getResource("/img/bibliotheque.png"));
 		Image library_2 = library_1.getImage();
