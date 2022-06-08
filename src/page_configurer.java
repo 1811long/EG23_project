@@ -53,10 +53,12 @@ public class page_configurer {
 		
 		
 		RetournerButton retourner = new RetournerButton(); 
+
 		retourner.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
+
 		retourner.setBounds(0, 0, 53, 50);
 		frame.getContentPane().add(retourner);
 		

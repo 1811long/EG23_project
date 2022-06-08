@@ -11,9 +11,10 @@ import java.io.File;
 import java.io.IOException;
 
 public class ConfigurationPanel extends JPanel {
-        private JLabel valueLabel = new JLabel("0");
-        private CustomizedButton plusButton = new CustomizedButton(new ImageIcon(getClass().getResource("../img/plus_sign.png")));
-        private CustomizedButton minusButton = new CustomizedButton(new ImageIcon(getClass().getResource("../img/minus_sign.png")));
+         private JLabel valueLabel = new JLabel("0");
+         public CustomizedButton plusButton = new CustomizedButton(new ImageIcon(getClass().getResource("../img/plus_sign.png")));
+         public CustomizedButton minusButton = new CustomizedButton(new ImageIcon(getClass().getResource("../img/minus_sign.png")));
+
     public ConfigurationPanel(String text, ImageIcon imageIcon) throws IOException {
             setBackground(new Color(255, 250, 205));
             setBorder(new LineBorder(new Color(0, 0, 0), 2));
