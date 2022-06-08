@@ -13,6 +13,7 @@ import javax.swing.SwingConstants;
 
 import components.CustomizedButton;
 import components.RetournerButton;
+import components.CustomizedLabel;
 import javax.swing.JButton;
 import java.awt.SystemColor;
 import javax.swing.UIManager;
@@ -62,52 +63,39 @@ public class page_choisirZone {
 		retourner.setBounds(0, 0, 53, 50);
 		frame.getContentPane().add(retourner);
 		
-		JLabel titre = new JLabel("");
-		titre.setBounds(0, 0, 687, 50);
+		
+		
 		
 		
 		ImageIcon titre1 = new ImageIcon(page_choisirZone.class.getResource("/img/titre_choisirZone.png"));
-		Image titre2 = titre1.getImage();
-		Image titreModify = titre2.getScaledInstance(690,50,java.awt.Image.SCALE_SMOOTH);
-		titre1 = new ImageIcon(titreModify);
-		titre.setIcon(titre1);
+		CustomizedLabel titre = new CustomizedLabel(titre1, 690,50);
+		titre.setBounds(0, 0, 687, 50);
 		frame.getContentPane().add(titre);
 		
 		
+		
+		
+		
 		CustomizedButton butConfirmer = new CustomizedButton("Combattre", 150 , 50 );
+		butConfirmer.setSize(187, 50);
+		
+		ImageIcon sword_1 = new ImageIcon(page_accueil.class.getResource("/img/sword.png"));
+		Image sword_2 = sword_1.getImage();
+		Image swordModify  = sword_2.getScaledInstance(30,30,java.awt.Image.SCALE_SMOOTH);
+		sword_1 = new ImageIcon(swordModify);
+		butConfirmer.setIcon(sword_1);
 		butConfirmer.setFont(new Font("Dialog", Font.BOLD, 13));
 		butConfirmer.setForeground(new Color(0, 0, 0));
 		butConfirmer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		
-		JLabel sword = new JLabel("");
-		
-		ImageIcon sword_1 = new ImageIcon(page_accueil.class.getResource("/img/sword.png"));
-		Image sword_2 = sword_1.getImage();
-		Image swordModify  = sword_2.getScaledInstance(30,30,java.awt.Image.SCALE_SMOOTH);
-		sword_1 = new ImageIcon(swordModify);
-		sword.setIcon(sword_1);
-		
-		
-		sword.setBounds(396, 393, 37, 50);
-		frame.getContentPane().add(sword);
-		
-		
-		butConfirmer.setBackground(new Color(164, 200, 225));
-		butConfirmer.setHorizontalAlignment(SwingConstants.LEFT);
-		butConfirmer.setLocation(283, 393);
+		butConfirmer.setLocation(244, 432);
 		frame.getContentPane().add(butConfirmer);
 		
-		JButton BDE = new JButton("");
-		ImageIcon BDE_1 = new ImageIcon(page_accueil.class.getResource("/img/BDE.png"));
-		Image BDE_2 = BDE_1.getImage();
-		Image BDEModify  = BDE_2.getScaledInstance(70,70,java.awt.Image.SCALE_SMOOTH);
-		BDE_1 = new ImageIcon(BDEModify);
-		BDE.setIcon(BDE_1);
 		
-	
+		ImageIcon BDE_1 = new ImageIcon(page_accueil.class.getResource("/img/BDE.png"));
+		CustomizedButton BDE = new CustomizedButton(BDE_1, 70, 70);
 		BDE.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -115,14 +103,9 @@ public class page_choisirZone {
 		BDE.setBounds(167, 116, 103, 170);
 		frame.getContentPane().add(BDE);
 		
-		JButton quartier = new JButton("");
-		ImageIcon quartier_1 = new ImageIcon(page_accueil.class.getResource("/img/quartier.png"));
-		Image quartier_2 = quartier_1.getImage();
-		Image quartierModify  = quartier_2.getScaledInstance(70,70,java.awt.Image.SCALE_SMOOTH);
-		quartier_1 = new ImageIcon(quartierModify);
-		quartier.setIcon(quartier_1);
 		
-	
+		ImageIcon quartier_1 = new ImageIcon(page_accueil.class.getResource("/img/quartier.png"));
+		CustomizedButton quartier = new CustomizedButton(quartier_1, 70, 70);
 		quartier.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -130,14 +113,8 @@ public class page_choisirZone {
 		quartier.setBounds(305, 116, 103, 170);
 		frame.getContentPane().add(quartier);
 		
-		JButton industrielle = new JButton("");
 		ImageIcon industrielle_1 = new ImageIcon(page_accueil.class.getResource("/img/industrielle.png"));
-		Image industrielle_2 = industrielle_1.getImage();
-		Image industrielleModify  = industrielle_2.getScaledInstance(70,70,java.awt.Image.SCALE_SMOOTH);
-		industrielle_1 = new ImageIcon(industrielleModify);
-		industrielle.setIcon(industrielle_1);
-		
-	
+		CustomizedButton industrielle = new CustomizedButton(industrielle_1, 70, 70);
 		industrielle.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -145,12 +122,9 @@ public class page_choisirZone {
 		industrielle.setBounds(446, 116, 103, 170);
 		frame.getContentPane().add(industrielle);
 		
-		JButton sportive = new JButton("");
+		
 		ImageIcon sportive_1 = new ImageIcon(page_accueil.class.getResource("/img/sportive.png"));
-		Image sportive_2 = sportive_1.getImage();
-		Image sportiveModify  = sportive_2.getScaledInstance(70,70,java.awt.Image.SCALE_SMOOTH);
-		sportive_1 = new ImageIcon(sportiveModify);
-		sportive.setIcon(sportive_1);
+		CustomizedButton sportive = new CustomizedButton(sportive_1, 70, 70);
 		
 	
 		sportive.addActionListener(new ActionListener() {

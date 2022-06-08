@@ -50,10 +50,12 @@ public class CustomizedButton extends JButton{
         setBackground(BACKGROUND_COLOR);
     }
 
-    public CustomizedButton(String text, String type){
-        switch (type){
-
-        }
+    public CustomizedButton( ImageIcon icon, int width, int height) {
+    	Image icon_1 = icon.getImage();
+		Image iconModify  = icon_1.getScaledInstance(width,height,java.awt.Image.SCALE_SMOOTH);
+		icon = new ImageIcon(iconModify);
+		setIcon(icon);
+		
     }
 
 }
