@@ -1,12 +1,24 @@
-import components.CustomizedButton;
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.Image;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+
+import components.CustomizedButton;
 
 public class page_parametrage {
     private JFrame frame;
 
-    CustomizedButton[] buttons = new CustomizedButton[7];
+    CustomizedButton[] buttons = new CustomizedButton[]{
+            new CustomizedButton("ISI"),
+            new CustomizedButton("RT"),
+            new CustomizedButton("A2I"),
+            new CustomizedButton("GM"),
+            new CustomizedButton("GI"),
+            new CustomizedButton("MTE"),
+            new CustomizedButton("MM")
+    };
 
     CustomizedButton continuerButton = new CustomizedButton("CONTINUER");
 
@@ -19,7 +31,6 @@ public class page_parametrage {
             {507,279},
             {324,401}
     };
-    String[] branches = new String[]{"ISI","RT","A2I","GM","GI","MTE","MM"};
 
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
@@ -47,6 +58,7 @@ public class page_parametrage {
 
         for (int i = 0; i < 7; i++){
             CustomizedButton button = buttons[i];
+<<<<<<< HEAD
             String branche = branches[i];
             String iconURL = "img/" + branche + ".png";
             ImageIcon icon = new ImageIcon(getClass().getResource(iconURL));
@@ -54,6 +66,8 @@ public class page_parametrage {
             Image newimg = image.getScaledInstance(60,60, java.awt.Image.SCALE_SMOOTH);
             icon = new ImageIcon(newimg);
             button = new CustomizedButton(branche,icon);
+=======
+>>>>>>> 13725a7d5acefd99b7929dbd9996cbefc5195089
             button.setLocation(location[i][0],location[i][1]);
             frame.getContentPane().add(button);
         }
@@ -61,5 +75,13 @@ public class page_parametrage {
         continuerButton.setLocation(668,482);
         continuerButton.setBackground(new Color(150,224,240));
 
+        frame.getContentPane().add(continuerButton);
+        
+        JPanel panel = new JPanel();
+        panel.setBounds(10, 10, 929, 54);
+        frame.getContentPane().add(panel);
+        
+        JLabel lblNewLabel = new JLabel("New label");
+        panel.add(lblNewLabel);
     }
 }

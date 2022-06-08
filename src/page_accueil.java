@@ -1,14 +1,18 @@
-import components.CustomizedButton;
 import java.awt.EventQueue;
 import java.awt.Image;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+<<<<<<< HEAD
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.sql.SQLOutput;
+=======
+>>>>>>> 13725a7d5acefd99b7929dbd9996cbefc5195089
 import javax.swing.JLabel;
-import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
+
+import components.CustomizedButton;
 
 public class page_accueil {
 
@@ -25,6 +29,7 @@ public class page_accueil {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+<<<<<<< HEAD
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -35,6 +40,11 @@ public class page_accueil {
 				}
 			}
 		});	}
+=======
+		page_accueil window = new page_accueil();
+		window.frame.setVisible(true);
+	}
+>>>>>>> 13725a7d5acefd99b7929dbd9996cbefc5195089
 
 	/**
 	 * Create the application.
@@ -51,6 +61,7 @@ public class page_accueil {
 		frame.setBounds(100, 100, 807, 591);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		jouerButton.setToolTipText("");
 
 		jouerButton.setLocation(143,140);
 		parametrageButton.setLocation(143,238);

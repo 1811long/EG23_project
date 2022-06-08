@@ -35,14 +35,14 @@ public class CustomizedButton extends JButton{
     }
 
 
-    public CustomizedButton(String text, ImageIcon icon, int width, int height){
+    public CustomizedButton(String text, int width, int height){
         setSize(width,height);
 
         setHorizontalAlignment(SwingConstants.RIGHT);
         setHorizontalTextPosition(SwingConstants.LEFT);
         setIconTextGap(40);
 
-        setIcon(icon);
+        
         setFont(FONT_DEFAULT);
 
         setBorder(new RoundBtn(15));
