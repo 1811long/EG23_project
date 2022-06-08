@@ -1,13 +1,12 @@
-import components.CustomizedButton;
 import java.awt.EventQueue;
 import java.awt.Image;
 
-import javax.swing.JFrame;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import javax.swing.JLabel;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+
+import components.CustomizedButton;
 
 public class page_accueil {
 
@@ -42,6 +41,7 @@ public class page_accueil {
 		frame.setBounds(100, 100, 807, 591);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		jouerButton.setToolTipText("");
 
 		jouerButton.setLocation(143,140);
 		parametrageButton.setLocation(143,238);
