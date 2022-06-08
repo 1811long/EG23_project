@@ -134,13 +134,8 @@ public class page_choisirZone {
 		sportive.setBounds(570, 116, 103, 170);
 		frame.getContentPane().add(sportive);
 		
-		JButton library = new JButton("");
-		
 		ImageIcon library_1 = new ImageIcon(page_accueil.class.getResource("/img/bibliotheque.png"));
-		Image library_2 = library_1.getImage();
-		Image libraryModify  = library_2.getScaledInstance(70,70,java.awt.Image.SCALE_SMOOTH);
-		library_1 = new ImageIcon(libraryModify);
-		library.setIcon(library_1);
+		CustomizedButton library = new CustomizedButton(library_1, 70, 70);
 		
 	
 		library.addActionListener(new ActionListener() {
