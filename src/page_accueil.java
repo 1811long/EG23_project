@@ -5,6 +5,7 @@ import java.awt.Image;
 import javax.swing.JFrame;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.sql.SQLOutput;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
@@ -16,6 +17,7 @@ public class page_accueil {
 	private CustomizedButton jouerButton = new CustomizedButton("JOUER");
 	private CustomizedButton parametrageButton = new CustomizedButton("PARAMETRAGE");
 	private CustomizedButton aideButton = new CustomizedButton("AIDE");
+
 	private final JLabel background = new JLabel("");
 	private final JLabel samurai = new JLabel("");
 
@@ -32,8 +34,7 @@ public class page_accueil {
 					e.printStackTrace();
 				}
 			}
-		});
-	}
+		});	}
 
 	/**
 	 * Create the application.
@@ -56,45 +57,43 @@ public class page_accueil {
 		aideButton.setLocation(143,349);
 
 		frame.getContentPane().add(jouerButton);
-		
+
 		JLabel titre = new JLabel("");
-		ImageIcon titre1 = new ImageIcon(page_accueil.class.getResource("/img/titre.png"));
+
+
+		ImageIcon titre1 = new ImageIcon(getClass().getResource("img/titre.png"));
 		Image titre2 = titre1.getImage();
 		Image titreModify = titre2.getScaledInstance(500,50,java.awt.Image.SCALE_SMOOTH);
 		titre1 = new ImageIcon(titreModify);
+
 		titre.setIcon(titre1);
 		titre.setBounds(185, -16, 574, 145);
-		
-		
+
+
 		frame.getContentPane().add(titre);
 		frame.getContentPane().add(parametrageButton);
 		frame.getContentPane().add(aideButton);
-		
-		
+
 		samurai.setHorizontalAlignment(SwingConstants.CENTER);
-		
-		ImageIcon samurai1 = new ImageIcon(page_accueil.class.getResource("/img/samurai.png"));
+		ImageIcon samurai1 = new ImageIcon(getClass().getResource("img/samurai.png"));
 		Image samurai2 = samurai1.getImage();
 		Image samuraiModify = samurai2.getScaledInstance(400,400,java.awt.Image.SCALE_SMOOTH);
 		samurai1 = new ImageIcon(samuraiModify);
-		
 		samurai.setIcon(samurai1);
 		samurai.setBounds(284, 67, 586, 452);
-		
+
 		frame.getContentPane().add(samurai);
-		
-		ImageIcon background1 = new ImageIcon(page_accueil.class.getResource("/img/background.jpeg"));
+
+		ImageIcon background1 = new ImageIcon(getClass().getResource("img/background.jpeg"));
 		Image background2 = background1.getImage();
 		Image backgroundModify = background2.getScaledInstance(800,800,java.awt.Image.SCALE_SMOOTH);
 		background1 = new ImageIcon(backgroundModify);
 		background.setIcon(background1);
 		background.setBounds(0, -16, 917, 560);
-		
+
 		frame.getContentPane().add(background);
-		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(0, 0, 45, 13);
-		frame.getContentPane().add(lblNewLabel);
+
+
 
 	}
 }
