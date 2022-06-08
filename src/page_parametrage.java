@@ -1,7 +1,11 @@
-import components.CustomizedButton;
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.Image;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+
+import components.CustomizedButton;
 
 public class page_parametrage {
     private JFrame frame;
