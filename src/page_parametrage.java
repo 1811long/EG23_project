@@ -2,8 +2,7 @@ import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Image;
 
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
+import javax.swing.*;
 
 import components.CustomizedButton;
 
@@ -31,6 +30,7 @@ public class page_parametrage {
             {507,279},
             {324,401}
     };
+    String[] branches = new String[]{"ISI","RT","A2I","GM","GI","MTE","MM"};
 
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
@@ -58,7 +58,6 @@ public class page_parametrage {
 
         for (int i = 0; i < 7; i++){
             CustomizedButton button = buttons[i];
-<<<<<<< HEAD
             String branche = branches[i];
             String iconURL = "img/" + branche + ".png";
             ImageIcon icon = new ImageIcon(getClass().getResource(iconURL));
@@ -66,8 +65,6 @@ public class page_parametrage {
             Image newimg = image.getScaledInstance(60,60, java.awt.Image.SCALE_SMOOTH);
             icon = new ImageIcon(newimg);
             button = new CustomizedButton(branche,icon);
-=======
->>>>>>> 13725a7d5acefd99b7929dbd9996cbefc5195089
             button.setLocation(location[i][0],location[i][1]);
             frame.getContentPane().add(button);
         }
