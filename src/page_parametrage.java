@@ -6,7 +6,15 @@ import java.awt.*;
 public class page_parametrage {
     private JFrame frame;
 
-    CustomizedButton[] buttons = new CustomizedButton[7];
+    CustomizedButton[] buttons = new CustomizedButton[]{
+            new CustomizedButton("ISI"),
+            new CustomizedButton("RT"),
+            new CustomizedButton("A2I"),
+            new CustomizedButton("GM"),
+            new CustomizedButton("GI"),
+            new CustomizedButton("MTE"),
+            new CustomizedButton("MM")
+    };
 
     CustomizedButton continuerButton = new CustomizedButton("CONTINUER");
 
@@ -19,7 +27,6 @@ public class page_parametrage {
             {507,279},
             {324,401}
     };
-    String[] branches = new String[]{"ISI","RT","A2I","GM","GI","MTE","MM"};
 
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
@@ -45,21 +52,8 @@ public class page_parametrage {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().setLayout(null);
 
-//        ImageIcon icon = new ImageIcon("C:\\Users\\vulon\\eclipse-workspace\\EG23_project\\Image\\img\\ISI.png");
-//        Image image = icon.getImage();
-//        Image newimg = image.getScaledInstance(60,60, java.awt.Image.SCALE_SMOOTH);
-//        icon = new ImageIcon(newimg);
-//        CustomizedButton button1 = new CustomizedButton("ISI", icon);
-
         for (int i = 0; i < 7; i++){
             CustomizedButton button = buttons[i];
-            String branche = branches[i];
-            String iconURL = "C:\\Users\\vulon\\eclipse-workspace\\EG23_project\\Image\\img\\" + branche + ".png";
-            ImageIcon icon = new ImageIcon(iconURL);
-            Image image = icon.getImage();
-            Image newimg = image.getScaledInstance(60,60, java.awt.Image.SCALE_SMOOTH);
-            icon = new ImageIcon(newimg);
-            button = new CustomizedButton(branche,icon);
             button.setLocation(location[i][0],location[i][1]);
             frame.getContentPane().add(button);
         }
@@ -67,5 +61,13 @@ public class page_parametrage {
         continuerButton.setLocation(668,482);
         continuerButton.setBackground(new Color(150,224,240));
 
+        frame.getContentPane().add(continuerButton);
+        
+        JPanel panel = new JPanel();
+        panel.setBounds(10, 10, 929, 54);
+        frame.getContentPane().add(panel);
+        
+        JLabel lblNewLabel = new JLabel("New label");
+        panel.add(lblNewLabel);
     }
 }

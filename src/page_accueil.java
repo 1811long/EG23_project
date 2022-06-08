@@ -23,16 +23,8 @@ public class page_accueil {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					page_accueil window = new page_accueil();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+		page_accueil window = new page_accueil();
+		window.frame.setVisible(true);
 	}
 
 	/**
