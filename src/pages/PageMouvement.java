@@ -82,7 +82,7 @@ public class PageMouvement {
         ImageIcon imgSoldatElite = new ImageIcon(getClass().getResource("../img/soldat_elite.png"));
         ImageIcon imgMaitreDeGuerre = new ImageIcon(getClass().getResource("../img/maitre_de_guerre.png"));
 
-        PointDeViePanel soldat1 = new PointDeViePanel("Soldat 1")
+        PointDeViePanel soldat1 = new PointDeViePanel("Soldat 1");
 
         frame.getContentPane().add(zoneLabel);
     }
