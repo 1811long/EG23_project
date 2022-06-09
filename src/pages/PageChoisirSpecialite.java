@@ -62,6 +62,14 @@ public class PageChoisirSpecialite {
 
         RetournerButton retourner = new RetournerButton();
         retourner.setBounds(0, 0, 53, 50);
+        retourner.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                PageAccueil pageAccueil = new PageAccueil();
+                pageAccueil.setVisible(true);
+                frame.setVisible(false);
+            }
+        });
         frame.getContentPane().add(retourner);
 
         JLabel titreLabel = new JLabel("Choisir votre programme avant de combattre");
@@ -113,5 +121,9 @@ public class PageChoisirSpecialite {
                 frame.setVisible(false);
             }
         });
+    }
+
+    public void setVisible(boolean b) {
+        frame.setVisible(b);
     }
 }

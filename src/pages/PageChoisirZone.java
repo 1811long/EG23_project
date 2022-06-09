@@ -52,6 +52,14 @@ public class PageChoisirZone {
 
 		RetournerButton retourner = new RetournerButton();
 		retourner.setBounds(0, 0, 53, 50);
+		retourner.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				PageConfigurerSoldat pageConfigurerSoldat = new PageConfigurerSoldat();
+				pageConfigurerSoldat.setVisible(true);
+				frame.setVisible(false);
+			}
+		});
 
 		JLabel titreLabel = new JLabel("Choisir une zone pour organiser votre troupe");
 		titreLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -85,11 +93,19 @@ public class PageChoisirZone {
 		Image swordModify  = sword_2.getScaledInstance(40,40,java.awt.Image.SCALE_SMOOTH);
 		sword_1 = new ImageIcon(swordModify);
 
-		CustomizedButton butConfirmer = new CustomizedButton("Lancer un combat", sword_1);
-		butConfirmer.setSize(250,55);
-		butConfirmer.setLocation(230, 432);
+		CustomizedButton buttonLancer = new CustomizedButton("Lancer un combat", sword_1);
+		buttonLancer.setSize(250,55);
+		buttonLancer.setLocation(230, 432);
+		buttonLancer.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				PageEnCombat pageEnCombat = new PageEnCombat();
+				pageEnCombat.setVisible(true);
+				frame.setVisible(false);
+			}
+		});
 
-		frame.getContentPane().add(butConfirmer);
+		frame.getContentPane().add(buttonLancer);
 		frame.getContentPane().add(titreLabel);
 		frame.getContentPane().add(retourner);
 		frame.getContentPane().add(biblioZone);
@@ -100,4 +116,7 @@ public class PageChoisirZone {
 
 	}
 
+	public void setVisible(boolean b) {
+		frame.setVisible(b);
+	}
 }

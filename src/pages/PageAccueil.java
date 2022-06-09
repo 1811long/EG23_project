@@ -2,6 +2,8 @@ package pages;
 
 import java.awt.EventQueue;
 import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -10,7 +12,7 @@ import javax.swing.SwingConstants;
 
 import components.CustomizedButton;
 
-public class page_accueil {
+public class PageAccueil {
 
 	private JFrame frame;
 	private CustomizedButton jouerButton = new CustomizedButton("JOUER");
@@ -27,7 +29,7 @@ public class page_accueil {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					page_accueil window = new page_accueil();
+					PageAccueil window = new PageAccueil();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -39,7 +41,7 @@ public class page_accueil {
 	 * Create the application.
 	 */
 
-	public page_accueil() {
+	public PageAccueil() {
 		initialize();
 	}
 	/**
@@ -48,6 +50,7 @@ public class page_accueil {
 
 	private void initialize() {
 		frame = new JFrame();
+
 		frame.setBounds(100, 100, 807, 591);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
@@ -73,7 +76,6 @@ public class page_accueil {
 		frame.getContentPane().add(titre);
 		frame.getContentPane().add(parametrageButton);
 		frame.getContentPane().add(aideButton);
-
 		samurai.setHorizontalAlignment(SwingConstants.CENTER);
 		ImageIcon samurai1 = new ImageIcon(getClass().getResource("../img/samurai.png"));
 		Image samurai2 = samurai1.getImage();
@@ -92,5 +94,18 @@ public class page_accueil {
 		background.setBounds(0, -16, 917, 560);
 
 		frame.getContentPane().add(background);
+
+		jouerButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				PageChoisirSpecialite pageChoisirSpecialite = new PageChoisirSpecialite();
+				pageChoisirSpecialite.setVisible(true);
+				frame.setVisible(false);
+			}
+		});
+	}
+
+	public void setVisible(boolean b) {
+		frame.setVisible(b);
 	}
 }

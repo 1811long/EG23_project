@@ -52,6 +52,15 @@ public class PageConfigurerSoldat {
 		RetournerButton retourner = new RetournerButton();
 		retourner.setBounds(0, 0, 53, 50);
 
+		retourner.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				PageChoisirSpecialite pageChoisirSpecialite = new PageChoisirSpecialite();
+				pageChoisirSpecialite.setVisible(true);
+				frame.setVisible(false);
+			}
+		});
+
 		JLabel titreLabel = new JLabel("Choisir votre programme avant de combattre");
 		titreLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		titreLabel.setOpaque(true);
@@ -88,10 +97,20 @@ public class PageConfigurerSoldat {
 		JScrollPane scrollPane = new JScrollPane(mainPanel, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		scrollPane.setBounds(148, 72, 660, 500);
 
-		CustomizedButton chargerButton = new CustomizedButton("Charger Vos Troupes");
-		chargerButton.setBounds(350,600,250,50);
-		frame.getContentPane().add(retourner);
+		CustomizedButton chargerButton = new CustomizedButton("Charger vos troupes dans des zones");
+		chargerButton.setFont(new Font("Taroma", Font.BOLD,15));
+		chargerButton.setBounds(300,600,400,50);
 
+		chargerButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				PageChoisirZone pageChoisirZone = new PageChoisirZone();
+				pageChoisirZone.setVisible(true);
+				frame.setVisible(false);
+			}
+		});
+
+		frame.getContentPane().add(retourner);
 		frame.getContentPane().add(titreLabel);
 		frame.getContentPane().add(chargerButton);
 		frame.getContentPane().add(scrollPane);

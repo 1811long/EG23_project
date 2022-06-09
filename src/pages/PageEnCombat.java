@@ -104,4 +104,8 @@ public class PageEnCombat {
 		frame.getContentPane().add(industriellePanel);
 		frame.getContentPane().add(sportivePanel);
 	}
+
+	public void setVisible(boolean b) {
+		setVisible(b);
+	}
 }
