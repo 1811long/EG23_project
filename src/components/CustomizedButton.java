@@ -3,8 +3,10 @@
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class CustomizedButton extends JButton{
+    public class CustomizedButton extends JButton{
 	
     public final Font FONT_DEFAULT = new Font("Purisa", Font.BOLD, 13);
     public final Color BACKGROUND_COLOR = new Color(164,200,225);
@@ -23,31 +25,23 @@ public class CustomizedButton extends JButton{
     public CustomizedButton(String text, ImageIcon icon){
         setIcon(icon);
         setFont(FONT_DEFAULT);
-
         setHorizontalAlignment(SwingConstants.RIGHT);
         setHorizontalTextPosition(SwingConstants.LEFT);
         setIconTextGap(40);
-
         setBorder(new RoundBtn(15));
         setText(text);
-        setBackground(BACKGROUND_COLOR);
         setSize(200,60);
     }
 
-
     public CustomizedButton(String text, int width, int height){
         setSize(width,height);
-
         setHorizontalAlignment(SwingConstants.RIGHT);
         setHorizontalTextPosition(SwingConstants.LEFT);
         setIconTextGap(40);
-
-        
         setFont(FONT_DEFAULT);
-
+        setBackground(BACKGROUND_COLOR);
         setBorder(new RoundBtn(15));
         setText(text);
-        setBackground(BACKGROUND_COLOR);
     }
 
     public CustomizedButton (ImageIcon icon){
@@ -56,14 +50,6 @@ public class CustomizedButton extends JButton{
         icon = new ImageIcon(newimg);
         setIcon(icon);
         setBackground(new Color(196, 196, 196));
-    }
-
-    public CustomizedButton(String text, String type){
-        switch (type){
-
-        }
-
-		
     }
 
     public CustomizedButton( ImageIcon icon, int width, int height) {
